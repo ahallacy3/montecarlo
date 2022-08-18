@@ -1,0 +1,9 @@
+<div style="position: absolute; left: 5em; top: 5em; display: flex">
+  <div style="margin-right: 1em">Select a Metric:</div>
+  <select name="Metrics" (change)="loadData($event)">
+    <option value=""></option>
+    <option *ngFor="let metric of metrics" value="{{metric.symbol}}">{{metric.symbol + ' ' + metric.rank}}</option>
+  </select>
+</div>
+
+<div id="plot" style="position: absolute; left: 20em; width:100%;max-width:700px"></div>
